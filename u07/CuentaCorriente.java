@@ -1,11 +1,16 @@
-package u07_a02_b;
+package u07_a03;
 
-class CuentaCorriente {
-   String dni; 
-   String nombre; 
-   double saldo; 
-   
-   boolean egreso(double cant) { 
+public class CuentaCorriente {
+  //sin modificador, visibilidad por defecto. Solo visible por clases vecinas
+  String dni;
+  
+  //visibilidad total
+  public String nombre;
+  
+  //invisible para cualquier clase (vecina o externa)
+  private double saldo;
+
+  boolean egreso(double cant) { 
       boolean operacionPosible;
       if (saldo >= cant) { 
          saldo -= cant;
@@ -40,4 +45,5 @@ class CuentaCorriente {
       this.nombre = nombre;
       this.saldo = saldo;
    }
+  
 }

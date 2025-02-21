@@ -1,21 +1,18 @@
-package u07_a02_b;
+package u07_a03;
 
 public class Main {
 
-   //Método main
    public static void main(String[] args) {
       CuentaCorriente c;
-
-      c = new CuentaCorriente("12345678-A", "Pepe");
-      c.ingreso(1000); 
-      c.egreso(300); 
-      c.mostrarInformacion(); 
-
-      System.out.println("Puedo sacar 700 euros: " + c.egreso(700)); 
-      System.out.println("Puedo sacar 500 euros: " + c.egreso(500)); 
-
       
-      c = new CuentaCorriente("98765432-Z", 2000);
-      c.mostrarInformacion();
+      //CuentaCorriente de ejemplo
+      c = new CuentaCorriente("12345678-A", "Pepe");
+
+      //produce un error, ya que el saldo no es visible desde fuera de la clase CuentaCorriente
+      //c.saldo = 2000;
+      c.dni = "11111111-T";
+      
+      //nombre es visible desde cualquier clase
+      c.nombre = "Antonio";
    }
 }
