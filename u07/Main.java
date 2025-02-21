@@ -2,6 +2,7 @@ package u07_a02_b;
 
 public class Main {
 
+   //Método main
    public static void main(String[] args) {
       CuentaCorriente c;
 
